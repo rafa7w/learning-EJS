@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,16 @@
         <title>Cities around the World</title>
 </head>
 <body>
-        <h1>Hello World</h1>
+        <% for (let city of cities) { %> 
+                <div class="card w-25 shadow m-2">
+                        <img src="<%=city.image%>"  alt="<%=city.city%> Image" class="card-img-top">
+                        <div class="card-body">
+                                <h4 class="card-title"><%=city.city%></h4>
+                                <p class="card-text"><%=city.description%></p>
+                                <a href="https://en.wikipedia.org/wiki/London" target="_blank" class="card-link text-decoration-none">Know more</a>
+                        </div>
+                </div>
+        <% } %> 
         
 </body>
 </html>
