@@ -8,14 +8,16 @@
 </head>
 <body>
         <% for (let city of cities) { %> 
-                <div class="card w-25 shadow m-2">
-                        <img src="<%=city.image%>"  alt="<%=city.city%> Image" class="card-img-top">
-                        <div class="card-body">
-                                <h4 class="card-title"><%=city.city%></h4>
-                                <p class="card-text"><%=city.description%></p>
-                                <a href="https://en.wikipedia.org/wiki/London" target="_blank" class="card-link text-decoration-none">Know more</a>
+                <% if (city.id % 2 == 0){ %>
+                        <div class="card w-25 shadow m-2">
+                                <img src="<%=city.image%>"  alt="<%=city.city%> Image" class="card-img-top">
+                                <div class="card-body">
+                                        <h4 class="card-title"><%=city.city%></h4>
+                                        <p class="card-text"><%=city.description%></p>
+                                        <a href="<%=city.link %> " target="_blank" class="card-link text-decoration-none">Know more</a>
+                                </div>
                         </div>
-                </div>
+                <% } %> 
         <% } %> 
         
 </body>
